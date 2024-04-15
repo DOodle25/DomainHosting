@@ -2,9 +2,19 @@
     height: 100vh;
     background-image: radial-gradient(circle at 100% 100%, rgb(66, 6, 68) 14%, rgb(77, 11, 77) 16%, rgb(198, 74, 193) 39%, rgb(204, 126, 214) 41%, rgb(84, 51, 88) 51%, rgb(0, 0, 0) 63%, rgb(28, 7, 30) 73%, rgb(0, 0, 0) 75%, rgb(22, 6, 24) 89%, rgb(0, 0, 0) 90%, rgb(30, 7, 30) 99%, rgb(0, 0, 0) 99%);
 }
-.center2 {
+.section-2 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-image: radial-gradient(circle at 100% 0%, rgb(66, 6, 68) 14%, rgb(77, 11, 77) 16%, rgb(198, 74, 193) 39%, rgb(204, 126, 214) 41%, rgb(84, 51, 88) 51%, rgb(0, 0, 0) 63%, rgb(28, 7, 30) 73%, rgb(0, 0, 0) 75%, rgb(22, 6, 24) 89%, rgb(0, 0, 0) 90%, rgb(30, 7, 30) 99%, rgb(0, 0, 0) 99%);
+}
+.center2 {
+    
+    
 }
 .landing-section1-main{
     padding-right: 10vw;
@@ -183,7 +193,7 @@
     } */
     .section-center>img{
         margin-top: 14vh;
-        width: 60%;
+        width: 55%;
         margin-left: 7%;
         margin-top: 7%;
     }
@@ -217,7 +227,8 @@
         display: block;
     }
 }
-.wrap{
+.wrap-2{
+    margin-top: 12vh;
     text-align: center;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
     transform-style: preserve-3d; 
@@ -231,7 +242,7 @@
     font-weight: 400;
     color: white;
 }
-.wrap>h2{
+.wrap-2>h2{
     margin-top: 2%;
     margin-bottom: 5%;
     font-family: 'Gothic A1';
@@ -434,6 +445,10 @@
         border-width: 1px;
         border-color: black;
     }
+    .wrap-2{
+        margin-top: 0vh;
+    }
+
 }
 
 .image-2 {
@@ -494,7 +509,9 @@
     padding-bottom: 40px;
     text-align: center;
 }
- h2 {
+
+h2 {
+    font-family: 'Gothic A1';
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;
