@@ -128,7 +128,7 @@ body {
     margin-top: 14vh;
 }
 /* Tablet size */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1024px){
     .circle-1-content{
         padding-right: 5vw;
         padding-left: 5vw;
