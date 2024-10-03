@@ -1,4 +1,4 @@
-# My Projects, Portfolio, and Experimental Snippets
+<div align="center"><h1> My Projects, Portfolio, and Experimental Snippets</h1></div>
 
 <div align="center">
   <h1>💼 Dipen's Projects & Portfolio</h1>
