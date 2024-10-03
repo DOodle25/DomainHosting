@@ -11,31 +11,42 @@
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease;
         }
 
         header {
-            background-color: #333;
+            background-color: #003366; /* Dark blue */
             color: #fff;
             padding: 30px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
 
         header h1 {
             font-size: 36px;
             margin: 0;
+            animation: fadeIn 1s ease forwards;
         }
 
         section {
             padding: 40px;
             background-color: #fff;
             margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #003366; /* Blue accent */
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
         }
 
         h2, h3 {
             font-size: 28px;
-            color: #333;
+            color: #003366; /* Blue */
             margin-bottom: 20px;
+            animation: fadeIn 1s ease forwards;
         }
 
         p, li {
@@ -51,6 +62,11 @@
 
         li {
             margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        li:hover {
+            color: #003366; /* Change color on hover */
         }
 
         img {
@@ -58,7 +74,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #003366; /* Dark blue */
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -69,12 +85,14 @@
         }
 
         a {
-            color: #333;
+            color: #003366; /* Blue */
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
             text-decoration: underline;
+            color: #0056b3; /* Lighter blue */
         }
 
         .project-list {
@@ -85,9 +103,14 @@
 
         .project-item {
             padding: 20px;
-            border-left: 5px solid #333;
+            border-left: 5px solid #003366; /* Blue accent */
             background-color: #f9f9f9;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-3px);
         }
 
         .project-item h3 {
@@ -110,6 +133,24 @@
             background-color: #eee;
             padding: 10px 20px;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .skills-section ul li:hover {
+            background-color: #003366; /* Dark blue on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
