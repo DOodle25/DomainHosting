@@ -4,145 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipen Patel - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Resets */
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            overflow-x: hidden;
         }
 
-        /* Header */
         header {
-            background-color: #0077b6;
+            background-color: #333;
             color: #fff;
-            padding: 50px 0;
+            padding: 30px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-            top: -100px;
-            left: -50%;
-            transform: rotate(45deg);
-            animation: spin 10s linear infinite;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            animation: slideIn 1s ease-out;
+            font-size: 36px;
+            margin: 0;
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Section Styling */
         section {
-            padding: 50px;
+            padding: 40px;
             background-color: #fff;
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s forwards;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        section:not(:first-child) {
-            margin-top: 40px;
+        h2, h3 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
         }
 
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            position: relative;
-            color: #0077b6;
-        }
-
-        section h2::after {
-            content: '';
-            width: 50px;
-            height: 4px;
-            background-color: #0077b6;
-            display: block;
-            margin: 10px 0;
-        }
-
-        section p, li {
-            font-size: 1.1rem;
-            line-height: 1.8;
+        p, li {
+            font-size: 18px;
+            line-height: 1.6;
             color: #555;
         }
 
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            list-style: none;
+            padding: 0;
         }
 
-        /* Responsive Flex Layout for Skills and Projects */
-        .flex-container {
+        li {
+            margin-bottom: 15px;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .project-list {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 20px;
         }
 
-        .flex-item {
-            flex: 1 1 45%;
-            min-width: 300px;
+        .project-item {
             padding: 20px;
-            border-radius: 10px;
+            border-left: 5px solid #333;
             background-color: #f9f9f9;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
-        .flex-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-
-        .flex-item h3 {
-            font-size: 1.8rem;
-            color: #555;
+        .project-item h3 {
+            font-size: 24px;
             margin-bottom: 10px;
+            color: #555;
         }
 
-        .flex-item ul {
+        .project-item ul {
             margin-top: 10px;
         }
 
-        /* Skills Section */
         .skills-section ul {
             display: flex;
             flex-wrap: wrap;
@@ -150,144 +107,26 @@
         }
 
         .skills-section ul li {
+            background-color: #eee;
             padding: 10px 20px;
-            background-color: #0077b6;
-            color: #fff;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        .skills-section ul li:hover {
-            background-color: #0096c7;
-        }
-
-        /* Hobbies Section */
-        .hobbies-section {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .hobbies-section:hover {
-            transform: scale(1.02);
-        }
-
-        /* Achievements Section */
-        .achievements-section ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .achievements-section li {
-            position: relative;
-            padding: 10px;
-            background: #e0fbfc;
-            margin: 10px 0;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
-
-        .achievements-section li:hover {
-            background: #90e0ef;
-        }
-
-        /* Contact Form */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #0077b6;
-            outline: none;
-        }
-
-        .contact-form button {
-            background-color: #0077b6;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #0096c7;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0077b6;
-            color: #fff;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: underline;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #90e0ef;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            .flex-container {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 500px) {
-            section h2 {
-                font-size: 2rem;
-            }
-
-            section p, li {
-                font-size: 1rem;
-            }
-        }
-
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Dipen Patel's Portfolio</h1>
+    <h1>Welcome to Dipen Patel's Portfolio</h1>
 </header>
 
-<section id="introduction" class="section-fade-in">
+<section id="introduction">
     <h2>Introduction</h2>
     <p>
         I am a fourth-year computer science student with experience in development and programming. Proficient in Python and currently mastering JavaScript, I possess extensive knowledge in front-end design and development as well as database management. My hands-on project experience spans across the MERN stack and Django development. I am actively seeking a full-time software development or engineering position starting May 2024.
     </p>
 </section>
 
-<section id="education" class="section-fade-in">
+<section id="education">
     <h2>Education</h2>
     <p><strong>B.Tech, Computer Science and Engineering</strong></p>
     <p>Parul University, Vadodara, Gujarat</p>
@@ -295,95 +134,77 @@
     <p>Relevant coursework: Data Structures, Object-Oriented Programming (CPP), Operating Systems, Azure Fundamentals, Discrete Mathematics.</p>
 </section>
 
-<section id="skills" class="skills-section section-fade-in">
+<section id="skills" class="skills-section">
     <h2>Technical Skills</h2>
     <ul>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>React.js</li>
-        <li>Node.js</li>
-        <li>Django</li>
-        <li>MongoDB</li>
-        <li>SQL</li>
-        <li>REST APIs</li>
-        <li>Git & GitHub</li>
+        <li>Programming: Python, JavaScript</li>
+        <li>Frontend: HTML, CSS, React.js</li>
+        <li>Backend: Node.js</li>
+        <li>Database: MySQL (SQL)</li>
+        <li>Tools: Figma, Canva, GIMP, Blender, GitHub, Porkbun, Ngrok</li>
     </ul>
 </section>
 
-<section id="projects" class="section-fade-in">
+<section id="projects">
     <h2>Projects</h2>
-    <div class="flex-container">
-        <div class="flex-item">
-            <h3>Personal Portfolio Website</h3>
-            <p>A responsive portfolio website showcasing my projects and skills.</p>
+    <div class="project-list">
+        <div class="project-item">
+            <h3>Code Canvas <small>(Feb 2024 - Present)</small></h3>
             <ul>
-                <li>Tech Stack: HTML, CSS, JavaScript</li>
-                <li>GitHub: <a href="https://github.com/your-repo" target="_blank">GitHub Link</a></li>
+                <li>Developed a responsive React-based web application with 8+ pages and JSX functionalities.</li>
+                <li>Facilitated user-contributed components in 5+ languages, including HTML5, CSS3, and JavaScript.</li>
+                <li>Hosted on a custom domain, tested for responsiveness and page load time.</li>
+                <li>Integrated Passport.js for authentication and utilized Node + Express for server-side database/API calls.</li>
             </ul>
         </div>
-        <div class="flex-item">
-            <h3>MERN E-commerce Application</h3>
-            <p>A full-stack e-commerce application built with MongoDB, Express, React, and Node.js.</p>
+
+        <div class="project-item">
+            <h3>District Integrated Dashboard <small>(Nov 2023 - Present)</small></h3>
             <ul>
-                <li>Features: User authentication, product management, shopping cart.</li>
-                <li>GitHub: <a href="https://github.com/your-repo" target="_blank">GitHub Link</a></li>
-            </ul>
-        </div>
-        <div class="flex-item">
-            <h3>Django REST API</h3>
-            <p>A RESTful API built with Django Rest Framework for a task management application.</p>
-            <ul>
-                <li>Features: User authentication, CRUD operations.</li>
-                <li>GitHub: <a href="https://github.com/your-repo" target="_blank">GitHub Link</a></li>
-            </ul>
-        </div>
-        <div class="flex-item">
-            <h3>Chatbot Application</h3>
-            <p>A chatbot application using Python and Natural Language Processing.</p>
-            <ul>
-                <li>Tech Stack: Python, NLTK</li>
-                <li>GitHub: <a href="https://github.com/your-repo" target="_blank">GitHub Link</a></li>
+                <li>Led a team of three to design and develop a government website for data visualization and analysis.</li>
+                <li>Developed a static front-end (7+ pages) for showcasing government initiatives.</li>
+                <li>Working on data collection for user-friendly access to government services.</li>
+                <li>Created interactive pages to guide users through the process of utilizing government resources.</li>
             </ul>
         </div>
     </div>
 </section>
 
-<section id="hobbies" class="hobbies-section section-fade-in">
-    <h2>Hobbies</h2>
-    <p>In my free time, I enjoy:</p>
+<section id="certifications">
+    <h2>Certifications</h2>
     <ul>
-        <li>Playing chess and participating in online tournaments.</li>
-        <li>Reading science fiction and tech blogs.</li>
-        <li>Contributing to open-source projects.</li>
-        <li>Exploring new technologies and frameworks.</li>
+        <li><strong>NPTEL - Software Engineering (Elite)</strong> | Jul 2023 - Oct 2023</li>
+        <li><strong>NPTEL - Data Analytics with Python (Silver + Elite)</strong> | Jan 2024 - Apr 2024</li>
     </ul>
 </section>
 
-<section id="achievements" class="achievements-section section-fade-in">
-    <h2>Achievements</h2>
+<section id="academic-activities">
+    <h2>Academic Activities</h2>
     <ul>
-        <li><strong>1st Place:</strong> Hackathon at XYZ University - Jan 2024</li>
-        <li><strong>2nd Place:</strong> Coding Competition at ABC Institute - Nov 2023</li>
-        <li><strong>Coursera:</strong> Python for Everybody Specialization - Apr 2023</li>
-        <li><strong>Udacity:</strong> React Nanodegree Program - Feb 2024</li>
+        <li>DSA enthusiast with multiple achievements on Leetcode.</li>
+        <li>Participated in 5+ hackathons, including OdooCombat-2024 and MLH.</li>
+        <li>Completed Harvard’s CS50 and CS50 Web courses.</li>
     </ul>
 </section>
 
-<section id="contact" class="section-fade-in">
-    <h2>Contact Me</h2>
-    <form class="contact-form" action="mailto:dipen@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<section id="additional-experience">
+    <h2>Additional Experience & Interests</h2>
+    <ul>
+        <li>One-year experience in B.Design from MS University Baroda (Year 1 - 83%).</li>
+        <li>Active GitHub contributor, participating in tech communities on Discord and LinkedIn.</li>
+        <li>Strong leadership and interpersonal skills, with a passion for innovation and open-source contributions.</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>
+        Connect with me on <a href="https://github.com/DOodle25">GitHub</a> and <a href="https://leetcode.com/DIPEN125/">Leetcode</a>, or reach out via <a href="https://www.linkedin.com/in/dipen-patel-792296260/">LinkedIn</a>. Let's build something amazing together!
+    </p>
 </section>
 
 <footer>
-    <p>© 2024 Dipen Patel. All Rights Reserved.</p>
-    <p>Contact: <a href="mailto:dipen@example.com">dipen@example.com</a></p>
+    <p>&copy; 2024 Dipen Patel. NO rights reserved😅.</p>
 </footer>
 
 </body>
