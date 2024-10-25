@@ -12,8 +12,9 @@
     <li><a href="Dipen.html" style="color: #3498db; text-decoration: none;">Dipen</a></li>
     <li><a href="https://portfolio-mdgq.onrender.com" style="color: #3498db; text-decoration: none;">Portfolio</a></li>
     <li><a href="https://didfrontend.onrender.com/" style="color: #3498db; text-decoration: none;">Project: "District Integrated Dashboard"</a></li>
-    <li><a href="Project-CodeCanvas/Code-Canvas-Landing-Page.html" style="color: #3498db; text-decoration: none;">Project: "Code-Canvas"</a></li>
-    <li><a href="Project-CodeCanvas-Login-Signup/Code-Canvas-Landing-Page.html" style="color: #3498db; text-decoration: none;">Project: "Code-Canvas with Login/Signup"</a></li>
+<!--     <li><a href="Project-CodeCanvas/Code-Canvas-Landing-Page.html" style="color: #3498db; text-decoration: none;">Project: "Code-Canvas"</a></li> -->
+    <li><a href="https://github.com/DOodle25/SyncUP" style="color: #3498db; text-decoration: none;">SyncUP"</a></li>
+    <li><a href="Project-CodeCanvas-Login-Signup/Code-Canvas-Landing-Page.html" style="color: #3498db; text-decoration: none;">Project: "Code-Canvas(Prototype)"</a></li>
   </ul>
 
   <hr>
