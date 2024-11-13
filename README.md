@@ -1,10 +1,43 @@
+  <style>
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #1a73e8; /* Google Drive Blue */
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #0c59a7; /* Darker blue on hover */
+      transform: translateY(-2px);
+    }
+
+    .download-btn:active {
+      transform: translateY(2px);
+    }
+
+    .download-btn img {
+      margin-right: 8px;
+      width: 20px;
+    }
+  </style>
 <div align="center">
   <h1>💼 Dipen's Projects & Portfolio</h1>
   <p>A collection of my work, projects, and experiments in web development</p>
   <hr>
   
   <div>
-    [![Download Resume](https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge&logo=google-drive)](https://drive.google.com/uc?export=download&id=12WaRrovfc6hM7mHm9czGxNq3zKBg8Xjg)]
+<a href="https://drive.google.com/uc?export=download&id=12WaRrovfc6hM7mHm9czGxNq3zKBg8Xjg" class="download-btn">
+    <img src="https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge&logo=google-drive" alt="Download Resume">
+    Download Resume
+  </a>
     
     <a href="https://github.com/DOodle25" style="font-size: 1.5rem; color: #333; text-decoration: none; margin: 0 15px;">
       <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=github&logoColor=white" alt="GitHub" />
