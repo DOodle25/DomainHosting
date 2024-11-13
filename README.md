@@ -4,6 +4,7 @@
   <hr>
   
   <div>
+    [![Download Resume](https://img.shields.io/badge/Resume-Download-blue?style=for-the-badge&logo=google-drive)](https://drive.google.com/uc?export=download&id=12WaRrovfc6hM7mHm9czGxNq3zKBg8Xjg)
     <a href="https://github.com/DOodle25" style="font-size: 1.5rem; color: #333; text-decoration: none; margin: 0 15px;">
       <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=github&logoColor=white" alt="GitHub" />
       GitHub
