@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>💼 Dipen's Projects & Portfolio</h1>
+  <h1>💼 Dipen's Projects & Portfolio </h1>
   <p>A collection of my work, projects, and experiments in web development</p>
   <hr>
   
