@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/23313f03-34e5-40af-9d70-80bec16f9e95
 <div align="center">
   <h1>💼 Dipen's Projects & Portfolio </h1>
   <p>A collection of my work, projects, and experiments in web development</p>
