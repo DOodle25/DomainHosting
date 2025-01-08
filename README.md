@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/23313f03-34e5-40af-9d70-80bec16f9e95
 <div align="center">
   <h1>💼 Dipen's Projects & Portfolio </h1>
   <p>A collection of my work, projects, and experiments in web development</p>
@@ -46,5 +48,32 @@
     <img src="https://img.shields.io/badge/React-blue" alt="React" />
     <img src="https://img.shields.io/badge/Node.js-brightgreen" alt="Node.js" />
     <img src="https://img.shields.io/badge/Django-darkgreen" alt="Django" />
+  </div>
+    <div>
+      <h5>Videos</h5>
+      
+
+
+
+https://github.com/user-attachments/assets/b9022278-9c21-4593-87c9-d71996262d35
+
+
+
+https://github.com/user-attachments/assets/b755f59b-3684-4793-a5a1-47b5932a1a73
+
+
+
+https://github.com/user-attachments/assets/199c8390-d342-4a65-83e2-35c2daabfef3
+
+
+
+https://github.com/user-attachments/assets/235ad0b8-1b91-4bc7-9a59-2b6d6e483e5a
+
+
+
+https://github.com/user-attachments/assets/fe9d6dcf-261d-4b8c-9b54-bf7db2052007
+
+
+
   </div>
 </div>
