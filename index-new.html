@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipen Patel | Full-Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;       /* Vibrant blue */
+            --primary-dark: #1e40af;
+            --secondary: #f59e0b;      /* Amber */
+            --light: #f8fafc;         /* Light background */
+            --dark: #1e293b;          /* Dark text */
+            --gray: #64748b;          /* Secondary text */
+            --light-gray: #e2e8f0;    /* Borders */
+            --success: #10b981;       /* Green */
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--secondary), transparent);
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .social-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .social-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .section-header i {
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--light-gray);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            height: 180px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+
+        .project-image i {
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background: var(--light);
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .project-link i {
+            font-size: 0.9rem;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Video Gallery */
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            background: var(--light-gray);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .tech-badge {
+            height: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects-grid, .video-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">DP</div>
+                <h1>Dipen Patel</h1>
+                <p>Full-Stack Developer & Technical Innovator</p>
+                <div class="social-links">
+                    <a href="https://github.com/DOodle25" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/dipen-patel-792296260/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="Dipen.html" class="social-link" target="_blank">
+                        <i class="fas fa-file-alt"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Featured Projects -->
+        <section id="featured-projects">
+            <div class="section-header">
+                <i class="fas fa-star"></i>
+                <h2>Featured Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Star One CRM -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Star One CRM System</h3>
+                        <p>Complete CRM solution with admin, customer, and employee roles featuring three-layer authentication.</p>
+                        <div class="project-links">
+                            <a href="https://star-one-crm.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://star-one-crm-server.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-server"></i> Server
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>MERN Stack</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District Integrated Dashboard -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">District Integrated Dashboard</h3>
+                        <p>Government initiative website with dynamic front-end design and interactive data visuals.</p>
+                        <div class="project-links">
+                            <a href="https://district-integrated-dashboard.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Frontend
+                            </a>
+                            <a href="https://district-integrated-dashboard-backend-cudqcnbehzgye3c9.centralindia-01.azurewebsites.net/admin/login/?next=/admin/" class="project-link" target="_blank">
+                                <i class="fas fa-cog"></i> Admin
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>Django + React</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Projects -->
+        <section id="all-projects">
+            <div class="section-header">
+                <i class="fas fa-code"></i>
+                <h2>All Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- SyncUP -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SyncUP</h3>
+                        <p>Server-pinning solution for message synchronization and live messaging.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DOodle25/SyncUP" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>Node.js</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Canvas -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Code Canvas</h3>
+                        <p>Component distribution model through user contributions in 12+ languages.</p>
+                        <div class="project-links">
+                            <a href="Project-CodeCanvas-Login-Signup/Code-Canvas-Landing-Page.html" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Prototype
+                            </a>
+                            <a href="https://github.com/DOodle25/Code-Canvas-Server" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Server
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>React + Node</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DID React Native -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">DID React Native</h3>
+                        <p>Mobile version of District Integrated Dashboard.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DOodle25/DID-React-Native" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>React Native</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add remaining projects following the same structure -->
+                
+            </div>
+        </section>
+
+        <!-- Hosting Services -->
+        <section id="hosting">
+            <div class="section-header">
+                <i class="fas fa-server"></i>
+                <h2>Hosting Services</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Domain Hosting -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Domain Hosting</h3>
+                        <p>Custom domain hosting configuration panel.</p>
+                        <div class="project-links">
+                            <a href="https://www.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Visit
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>DNS Management</span>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ngrok Services -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Ngrok Services</h3>
+                        <p>Tunnel services for local development.</p>
+                        <div class="project-links">
+                            <a href="https://ngrok-1.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ngrok 1
+                            </a>
+                            <a href="https://ngrok-2.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ngrok 2
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>Development</span>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Render Services -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Render Services</h3>
+                        <p>Cloud hosting for various projects.</p>
+                        <div class="project-links">
+                            <a href="https://onrender-1.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> DID Backend
+                            </a>
+                            <a href="https://onrender-4.alynor.wiki" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> DID Frontend
+                            </a>
+                        </div>
+                        <div class="project-meta">
+                            <span>Cloud Hosting</span>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery -->
+        <section id="demos">
+            <div class="section-header">
+                <i class="fas fa-video"></i>
+                <h2>Project Demos</h2>
+            </div>
+            
+            <div class="video-gallery">
+                <div class="video-container">
+                    <iframe src="https://github.com/user-attachments/assets/66975bbb-fefc-44d0-b6b7-abdacad60603" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- Add other video iframes -->
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech-stack">
+            <div class="section-header">
+                <i class="fas fa-code"></i>
+                <h2>Technology Stack</h2>
+            </div>
+            
+            <div class="tech-stack">
+                <img src="https://img.shields.io/badge/MERN-stack-green" alt="MERN" class="tech-badge">
+                <img src="https://img.shields.io/badge/React-blue" alt="React" class="tech-badge">
+                <img src="https://img.shields.io/badge/Node.js-brightgreen" alt="Node.js" class="tech-badge">
+                <img src="https://img.shields.io/badge/Django-darkgreen" alt="Django" class="tech-badge">
+                <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" class="tech-badge">
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript" class="tech-badge">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="tech-stack">
+                    <!-- Additional tech badges if needed -->
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>pdipen135@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 94273 01003</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>alynor.wiki</span>
+                    </div>
+                </div>
+                
+                <p>© 2024 Dipen Patel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
