@@ -6,89 +6,38 @@
     <title>Dipen Patel - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-/* Neon Sky Blue Glass Theme */
+/* Modern Resume Styling */
 :root {
-  --primary: #0f0f0f;
-  --primary-dark: #000000;
-  --secondary: #00f0ff;
-  --neon-pink: #ff00ff;
-  --neon-purple: #9d00ff;
-  --neon-blue: #00f0ff;
-  --neon-green: #00ff9d;
-  --light: rgba(255, 255, 255, 0.9);
-  --dark: #0a0a0a;
-  --gray: rgba(255, 255, 255, 0.6);
-  --light-gray: rgba(255, 255, 255, 0.2);
-  --success: #00ff9d;
-  --glass-bg: rgba(15, 15, 15, 0.25);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --primary: #2563eb;       /* Vibrant blue */
+  --secondary: #1e40af;     /* Darker blue */
+  --accent: #f59e0b;        /* Golden accent */
+  --light: #f8fafc;         /* Light background */
+  --dark: #1e293b;          /* Dark text */
+  --gray: #64748b;          /* Secondary text */
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
-  color: var(--light);
-  background-color: var(--primary);
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 240, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(0, 240, 255, 0.15) 0%, transparent 50%);
-  max-width: 1000px;
+  color: var(--dark);
+  background-color: var(--light);
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-/* Glass Morphism Effect */
-.glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-radius: 12px;
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
 }
 
 /* Header Styling */
 header {
   text-align: center;
   margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  position: relative;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 2rem;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--neon-blue), var(--neon-blue), transparent);
-  animation: gradientFlow 8s ease infinite;
-  background-size: 200% 200%;
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1.5rem;
 }
 
 h1 {
   font-size: 2.5rem;
-  background: linear-gradient(90deg, var(--neon-blue), var(--neon-blue));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--primary);
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
 }
 
 .contact-bar {
@@ -96,7 +45,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .contact-item {
@@ -104,83 +53,23 @@ h1 {
   align-items: center;
   gap: 0.5rem;
   color: var(--gray);
-  transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-}
-
-.contact-item:hover {
-  color: var(--light);
-  background: rgba(0, 240, 255, 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-}
-
-.contact-item i {
-  color: var(--neon-blue);
 }
 
 /* Section Styling */
 section {
   margin-bottom: 3rem;
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: white;
   padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  box-shadow: var(--glass-shadow);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at 50% 0%,
-    rgba(0, 240, 255, 0.05) 0%,
-    transparent 70%
-  );
-  z-index: -1;
-}
-
-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 
-    0 15px 30px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(0, 240, 255, 0.3);
-  border-color: var(--neon-blue);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 h2 {
-  font-size: 1.8rem;
-  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--secondary);
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--neon-blue);
-  border-radius: 3px;
-  box-shadow: 0 0 10px var(--neon-blue);
+  border-bottom: 2px solid var(--accent);
 }
 
 /* Experience/Project Items */
@@ -190,128 +79,84 @@ h2::after {
   margin-bottom: 2.5rem;
   position: relative;
   padding-left: 1.5rem;
-  border-left: 3px solid rgba(0, 240, 255, 0.2);
+  border-left: 3px solid var(--light);
   transition: all 0.3s ease;
 }
 
 .experience-item:hover, 
-.project-item:hover,
-.research-item:hover {
-  border-left-color: var(--neon-blue);
-  background-color: rgba(0, 240, 255, 0.05);
+.project-item:hover {
+  border-left-color: var(--accent);
+  background-color: rgba(245, 158, 11, 0.05);
 }
 
 h3 {
-  font-size: 1.3rem;
-  color: var(--light);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
 }
 
 .date {
   color: var(--gray);
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   display: block;
 }
 
 /* List Styling */
 ul {
   padding-left: 1rem;
-  margin-top: 1rem;
 }
 
 li {
   margin-bottom: 0.75rem;
   position: relative;
-  padding-left: 1.5rem;
-  color: var(--gray);
-  line-height: 1.7;
-  list-style-type: none;
+  padding-left: 1.25rem;
 }
 
 li:before {
   content: "▹";
   position: absolute;
   left: 0;
-  color: var(--neon-blue);
-}
-
-/* Nested Lists */
-ul ul {
-  margin-top: 0.5rem;
-  padding-left: 1.5rem;
+  color: var(--accent);
 }
 
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .skill-category {
-  background: rgba(0, 240, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 0.8rem;
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 
-    0 10px 20px rgba(0, 0, 0, 0.3),
-    0 0 15px rgba(0, 240, 255, 0.2);
-  border-color: var(--neon-blue);
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .skill-category h3 {
-  font-size: 1.1rem;
-  color: var(--neon-blue);
-  margin-bottom: 0.75rem;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
-}
-
-.skill-category p {
-  color: var(--gray);
-  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
 /* Links */
 a {
-  color: var(--neon-blue);
+  color: var(--primary);
   text-decoration: none;
   transition: all 0.2s ease;
-  position: relative;
 }
 
 a:hover {
-  color: var(--neon-pink);
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .github-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.github-link:hover {
-  background: rgba(0, 240, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-}
-
-.github-link i {
-  color: var(--neon-blue);
 }
 
 /* Responsive Design */
@@ -328,60 +173,9 @@ a:hover {
     grid-template-columns: 1fr;
   }
   
-  .contact-bar {
-    gap: 1rem;
-  }
-  
   .contact-item {
     font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
   }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  h3 {
-    font-size: 1.1rem;
-  }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--neon-blue);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--neon-pink);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-section {
-  animation: fadeIn 0.6s ease-out;
 }
     </style>
 </head>
@@ -404,10 +198,10 @@ section {
                         <i class="fas fa-globe"></i>alynor.wiki
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-github"></i>DOodle25
+                        <i class="fab fa-github"></i>dipen-patel
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-user"></i>dipen-patel
+                        <i class="fas fa-user"></i>DOodle25
                     </div>
                 </div>
             </div>
